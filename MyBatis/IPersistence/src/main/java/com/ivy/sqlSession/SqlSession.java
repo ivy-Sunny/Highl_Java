@@ -1,5 +1,6 @@
 package com.ivy.sqlSession;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface SqlSession {
@@ -9,7 +10,7 @@ public interface SqlSession {
      * @param <E>
      * @return
      */
-    public <E> List<E> selectList(String statementid, Object... params);
+    public <E> List<E> selectList(String statementid, Object... params) throws SQLException;
 
     /**
      * 根据条件查询所有
